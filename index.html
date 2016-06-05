@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <!-- <link rel="icon" type="image/png" href="favicon.ico" /> -->
+    <link rel="stylesheet" href="index.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAOdWp9X87MCieL47qskJ2xDVSuMUTCE5w"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.tile.v0.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="addresses.js"></script>
+    <script src="dispatch_locations.js"></script>
+  </head>
+
+  <body>
+
+      <div id="title" class="box">
+        <h2> Seattle EMS Response Time Predictor </h2>
+      </div>
+
+      <div id="query" class="box">
+        <h3> Response Time Lookup </h3>
+        <input id="address-input" placeholder="Seattle Address..."></input>
+        <button id="address-search">Address Search</button>
+        <br/>
+        <input class="latlng" id="lat-input" placeholder="Lat..."></input>
+        <input class="latlng" id="lng-input" placeholder="Lng..."></input>
+        <button id="coordinate-search">Coordinate Search</button>
+
+        <div id="results"></div>
+
+      </div>
+
+      <div id="controls" class="box">
+        <div id="color-control">
+          <div id="color-slider"></div>
+        </div>
+        <p>Tile Opacity - <span id="opacity">40%</span></p>
+        <div id="opacity_slider"></div>
+        <p><input type="checkbox" id="check_dispatch" checked> Dispatch Centers<p>
+      </div>
+
+      <div id="map"></div>
+
+      <script src="index.js"></script>
+      <script src="address_generator.js"></script>
+  </body>
+</html>
